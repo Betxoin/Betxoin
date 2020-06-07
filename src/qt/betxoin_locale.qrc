@@ -1,0 +1,30 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/betxoin_bg.qm</file>
+        <file alias="ca">locale/betxoin_ca.qm</file>
+        <file alias="cs">locale/betxoin_cs.qm</file>
+        <file alias="da">locale/betxoin_da.qm</file>
+        <file alias="de">locale/betxoin_de.qm</file>
+        <file alias="en">locale/betxoin_en.qm</file>
+        <file alias="en_US">locale/betxoin_en_US.qm</file>
+        <file alias="es">locale/betxoin_es.qm</file>
+        <file alias="fi">locale/betxoin_fi.qm</file>
+        <file alias="fr_FR">locale/betxoin_fr_FR.qm</file>
+        <file alias="hr">locale/betxoin_hr.qm</file>
+        <file alias="it">locale/betxoin_it.qm</file>
+        <file alias="ja">locale/betxoin_ja.qm</file>
+        <file alias="ko_KR">locale/betxoin_ko_KR.qm</file>
+        <file alias="nl">locale/betxoin_nl.qm</file>
+        <file alias="pl">locale/betxoin_pl.qm</file>
+        <file alias="pt">locale/betxoin_pt.qm</file>
+        <file alias="pt_BR">locale/betxoin_pt_BR.qm</file>
+        <file alias="ro_RO">locale/betxoin_ro_RO.qm</file>
+        <file alias="ru">locale/betxoin_ru.qm</file>
+        <file alias="sk">locale/betxoin_sk.qm</file>
+        <file alias="sv">locale/betxoin_sv.qm</file>
+        <file alias="tr">locale/betxoin_tr.qm</file>
+        <file alias="uk">locale/betxoin_uk.qm</file>
+        <file alias="zh_CN">locale/betxoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/betxoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

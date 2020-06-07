@@ -1,0 +1,26 @@
+[Unit]
+Description=BETXOIN's distributed currency daemon
+After=network.target
+
+[Service]
+User=betxoin
+Group=betxoin
+
+Type=forking
+PIDFile=/var/lib/betxoind/betxoind.pid
+
+ExecStart=/usr/bin/betxoind -daemon -pid=/var/lib/betxoind/betxoind.pid \
+          -conf=/etc/betxoin/betxoin.conf -datadir=/var/lib/betxoind
+
+ExecStop=-/usr/bin/betxoin-cli -conf=/etc/betxoin/betxoin.conf \
+         -datadir=/var/lib/betxoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

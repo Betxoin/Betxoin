@@ -1,0 +1,26 @@
+# /etc/conf.d/betxoind: config file for /etc/init.d/betxoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/betxoin/betxoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/betxoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/betxoind.pid"
+
+# Where to write betxoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/betxoind"
+
+# User and group to own betxoind process
+#BITCOIND_USER="betxoin"
+#BITCOIND_GROUP="betxoin"
+
+# Path to betxoind executable
+#BITCOIND_BIN="/usr/bin/betxoind"
+
+# Nice value to run betxoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
