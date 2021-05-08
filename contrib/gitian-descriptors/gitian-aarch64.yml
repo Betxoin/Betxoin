@@ -1,5 +1,5 @@
 ---
-name: "betxoin-aarch64-1.0"
+name: "betxoin-aarch64-3.0"
 enable_cache: true
 suites:
 - "trusty"

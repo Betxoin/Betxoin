@@ -2119,62 +2119,76 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
-    int64_t nSubsidy = 0;
-    int64_t nSubsidyHalvingInterval = 525600; // 525,600 blocks 
-
-    if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight < 200 && nHeight > 0)
-            return 2500 * COIN;
-    }
 
     if (nHeight == 0) {
-  		nSubsidy = 2100000 * COIN;
-  	} else if (nHeight <= 10000 && nHeight > 0) {
-  		nSubsidy = 0.4 * COIN;
-  	} else if (nHeight <= 30000 && nHeight > 10000) {
-  		nSubsidy = 0.8 * COIN;
-  	} else if (nHeight <= 70000 && nHeight > 30000) {
-  		nSubsidy = 1.2 * COIN;
-  	} else if (nHeight <= 140000 && nHeight > 70000) {
-  		nSubsidy = 1.6 * COIN;
-  	} else if (nHeight <= 240000 && nHeight > 140000) {
-  		nSubsidy = 2 * COIN;
-  	} else if (nHeight <= 400000 && nHeight > 240000) {
-  		nSubsidy = 2.4 * COIN;
-  	} else if (nHeight <= 500000 && nHeight > 400000) {
-        nSubsidy = 3 * COIN;
-  	} else {
-        nSubsidy = 2.7 * COIN;
-  	}
+  		return COIN * 2100000;
+  	} else if (nHeight <= 10000 && nHeight > 0) {        //1-10000                0.320 betxc                 0.08 betxc
+  		return COIN * 0.4;
+  	} else if (nHeight <= 30000 && nHeight > 10000) {    //10001-30000            0.640 betxc                 0.16 betxc
+  		return COIN * 0.8;
+  	} else if (nHeight <= 70000 && nHeight > 30000) {    //30001-70000            0.960 betxc                 0.24 betxc
+  		return COIN * 1.2;
+  	} else if (nHeight <= 140000 && nHeight > 70000) {   //70001-140000           1.280 betxc                 0.32 betxc
+  		return COIN * 1.6;
+  	} else if (nHeight <= 240000 && nHeight > 140000) {  //140001-240000          1.600 betxc                 0.40 betxc
+  		return COIN * 2;
+  	} else if (nHeight <= 400000 && nHeight > 240000) {  //240001-400000          1.920 betxc                 0.48 betxc
+  		return COIN * 2.4;
+  	} else if (nHeight <= 500000 && nHeight > 400000) {  //400001-500000          2.400 betxc                 0.60 betxc
+        return COIN * 3;
+		
+  	} else if (nHeight <= 1025599 && nHeight > 500000) {  //500001-1025599        2.160 betxc                 0.54 betxc
+        return COIN * 2.7;
+  	} else if (nHeight <= 1122501 && nHeight > 1025599) { //1025600-1122500       1.944 betxc                 0.486 betxc
+        return COIN * 2.43;
+  	} else if (nHeight == 1122502) {
+        return COIN * 2000;
+  	} else if (nHeight == 1122503) {
+        return COIN * 200000;
+  	} else if (nHeight == 1122504) {
+        return COIN * 200000000;
+    } else if (nHeight > 1122504) {
+        return COIN * 50;
+    }
 
-		for (int i = nSubsidyHalvingInterval; i <= nHeight - 500000; i += nSubsidyHalvingInterval) {
-             nSubsidy -= nSubsidy/10;
-       }
-
-    return nSubsidy;
 }
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount)
 {
-    int64_t ret = 0;
 
-	//Testnet
-    if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight < 200)
-            return 0;
+    if (nHeight == 0) {
+  		return COIN * 2100000;
+  	} else if (nHeight < 251 && nHeight > 0) {           //1-251                  0.000 betxc                 0.40 betxc
+  		return COIN * 0;
+  	} else if (nHeight < 10000 && nHeight >= 251) {      //252-10000              0.320 betxc                 0.08 betxc
+  		return COIN * 0.32;
+  	} else if (nHeight < 30000 && nHeight >= 10000) {    //10001-30000            0.640 betxc                 0.16 betxc
+  		return COIN * 0.64;
+  	} else if (nHeight < 70000 && nHeight >= 30000) {    //30001-70000            0.960 betxc                 0.24 betxc
+  		return COIN * 0.96;
+  	} else if (nHeight < 140000 && nHeight >= 70000) {   //70001-140000           1.280 betxc                 0.32 betxc
+  		return COIN * 1.28;
+  	} else if (nHeight < 240000 && nHeight >= 140000) {  //140001-240000          1.600 betxc                 0.40 betxc
+  		return COIN * 1.60;
+  	} else if (nHeight < 400000 && nHeight >= 240000) {  //240001-400000          1.920 betxc                 0.48 betxc
+  		return COIN * 1.92;
+  	} else if (nHeight < 500000 && nHeight >= 400000) {  //400001-500000          2.400 betxc                 0.60 betxc
+        return COIN * 2.4;
+		
+  	} else if (nHeight < 1025599 && nHeight >= 500000) {  //500001-1025599        2.160 betxc                 0.54 betxc
+        return COIN * 2.16;
+  	} else if (nHeight < 1122501 && nHeight >= 1025599) { //1025600-1122500       1.944 betxc                 0.486 betxc
+        return COIN * 1.944;
+  	} else if (nHeight == 1122502) {
+        return COIN * 1;
+  	} else if (nHeight == 1122503) {
+        return COIN * 1;
+  	} else if (nHeight == 1122504) {
+        return COIN * 1;
+    } else if (nHeight > 1122504) {
+        return COIN * 45;
     }
 
-	// Variable Split
-
-	if (nHeight == 0) {
-	      ret = blockValue  / 100 * 0;
-	} else if (nHeight > 250) {
-		  ret = blockValue  / 100 * 80;	// 80% of block reward
-	} else {
-  		  ret = blockValue  / 100 * 0;
-	}
-
-    return ret;
 }
 
 bool IsInitialBlockDownload()

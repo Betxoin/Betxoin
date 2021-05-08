@@ -226,10 +226,10 @@ QT_TRANSLATE_NOOP("betxoin-core", ""
 QT_TRANSLATE_NOOP("betxoin-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("betxoin-core", "(30300 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("betxoin-core", "(33300 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("betxoin-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("betxoin-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("betxoin-core", "(must be 30300 for mainnet)"),
+QT_TRANSLATE_NOOP("betxoin-core", "(must be 33300 for mainnet)"),
 QT_TRANSLATE_NOOP("betxoin-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("betxoin-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("betxoin-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),

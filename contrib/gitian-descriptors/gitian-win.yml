@@ -1,5 +1,5 @@
 ---
-name: "betxoin-win-1.0"
+name: "betxoin-win-3.0"
 enable_cache: true
 suites:
 - "trusty"

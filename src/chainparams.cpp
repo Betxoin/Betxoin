@@ -104,7 +104,7 @@ public:
         pchMessageStart[2] = 0xfd;
         pchMessageStart[3] = 0xe9;
         vAlertPubKey = ParseHex("04f9ba74d610e915c988191fd0bec980f4fd39f8c005206527d911e72395a4c1bd10a2942eefab469e737ea23f3953d02238f3712bc50c6f8ffa87e11d25669bfd"); // mainalert pub
-        nDefaultPort = 30300;
+        nDefaultPort = 33300;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // BETXOIN starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 100000;
         nMaxReorganizationDepth = 100;
@@ -116,7 +116,7 @@ public:
         nTargetSpacing = 1 * 60;  // BETXOIN: 1 minute
         nMaturity = 110;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 21000000 * COIN;
+        nMaxMoneyOut = 2000000000 * COIN;
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 250;
@@ -158,9 +158,7 @@ public:
         assert(hashGenesisBlock == uint256("0x000000be028b5eadd4e3cbb438f09bdcd5e39f2d4f17f73f97b857de897ba8bd"));
         assert(genesis.hashMerkleRoot == uint256("0x76c090fd5ab8730ab8b02823c93296f78ca01066353da22ca6d9e406c9c5933b"));
 
-        vSeeds.push_back(CDNSSeedData("155.138.216.73", "155.138.216.73"));		// Single node address
-        vSeeds.push_back(CDNSSeedData("155.138.216.103", "155.138.216.103"));		// Single node address
-        vSeeds.push_back(CDNSSeedData("108.61.189.168", "108.61.189.168"));   		// Single node address
+        vSeeds.push_back(CDNSSeedData("81.163.28.244", "81.163.28.244"));		// Single node address
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 25);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 30);
@@ -277,7 +275,7 @@ public:
 
         nPoolMaxTransactions = 2;
         strSporkKey = "04561ba3aa1dc116d52f644427bcd7e07d75dad20c8f0ad998363692768c977c60e42d43751a5cb98ee9b20a9ea265f8876b8855a7f26cbef65c979aac0ffa9ea9"; // testnetspork pub
-        strObfuscationPoolDummyAddress = "BKACV4Podt1FAp5XhDevdySNypDkFEwDCr";
+        strObfuscationPoolDummyAddress = "BAFkgC7wWkj6Ah96tM3Qq4HScdFFLg5yJ2";
         nStartMasternodePayments = 1540479706; // ~ 1540473106 (timestamp genesis block) + 110 (block) * 60 (timespan block) =~ 1540479706
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
                                        // here because we only have a 8 block finalization window on testnet

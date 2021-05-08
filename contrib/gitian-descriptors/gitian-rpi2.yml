@@ -1,5 +1,5 @@
 ---
-name: "betxoin-rpi2-2.1.7"
+name: "betxoin-rpi2-3.0.0"
 enable_cache: true
 suites:
 - "trusty"

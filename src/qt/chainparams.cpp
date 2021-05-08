@@ -106,7 +106,7 @@ public:
         pchMessageStart[2] = 0xfd;
         pchMessageStart[3] = 0xe9;
         vAlertPubKey = ParseHex("04f9ba74d610e915c988191fd0bec980f4fd39f8c005206527d911e72395a4c1bd10a2942eefab469e737ea23f3953d02238f3712bc50c6f8ffa87e11d25669bfd"); // mainalert pub
-        nDefaultPort = 30300;
+        nDefaultPort = 33300;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // BETXOIN starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 100000;
         nMaxReorganizationDepth = 100;
@@ -187,7 +187,7 @@ public:
 
         nPoolMaxTransactions = 3;
         strSporkKey = "04ed6427b205c136e9688d3d2f3b1d71b16e6c7818601d8ba4b7a5abf514851c505f7bfce0673750972825f388677a76cb0c874849d697b5c59ecf2583dc0fee50"; // mainspork pub
-        strObfuscationPoolDummyAddress = "BKACV4Podt1FAp5XhDevdySNypDkFEwDCr";
+        strObfuscationPoolDummyAddress = "BAFkgC7wWkj6Ah96tM3Qq4HScdFFLg5yJ2";
         nStartMasternodePayments = 1540479706; // ~ 1540473106 (timestamp genesis block) + 110 (block) * 60 (timespan block) =~ 1540479706
 
         /** Zerocoin */
@@ -280,7 +280,7 @@ public:
 
         nPoolMaxTransactions = 2;
         strSporkKey = "04561ba3aa1dc116d52f644427bcd7e07d75dad20c8f0ad998363692768c977c60e42d43751a5cb98ee9b20a9ea265f8876b8855a7f26cbef65c979aac0ffa9ea9"; // testnetspork pub
-        strObfuscationPoolDummyAddress = "BKACV4Podt1FAp5XhDevdySNypDkFEwDCr";
+        strObfuscationPoolDummyAddress = "BAFkgC7wWkj6Ah96tM3Qq4HScdFFLg5yJ2";
         nStartMasternodePayments = 1540479706; // ~ 1540473106 (timestamp genesis block) + 110 (block) * 60 (timespan block) =~ 1540479706
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
                                        // here because we only have a 8 block finalization window on testnet

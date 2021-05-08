@@ -1,5 +1,5 @@
 ---
-name: "betxoin-linux-1.0"
+name: "betxoin-linux-3.0"
 enable_cache: true
 suites:
 - "trusty"
